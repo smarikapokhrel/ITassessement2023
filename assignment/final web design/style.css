@@ -14,9 +14,8 @@ header{
 .wrapper {
   display: flex;
   justify-content: space-between;
-  padding: 5px;
   align-items: center;
-  position: fixed;
+  position: absolute;
   background-color: #333;
   color: #fff;
   width: 100%;
@@ -47,18 +46,102 @@ header{
   color: #000;
   text-decoration: underline;
 }
-
-.content {
+#Image-slider {
+  width: 600px;
+  height:50px;
   position: absolute;
   top: 500%;
   left: 50%;
   transform: translate(-50%, -50%);
+}
+
+.navigation {
+  position: relative;
+  padding-top: 50%;
+}
+
+.navigation .prev {
+  position: absolute;
+  z-index: 10;
+  font-size: 25px;
+  top: 30%;
+  left: -60px;
+  content: '\2190' ;
+}
+
+.navigation .next {
+  position: absolute;
+  z-index: 10;
+  font-size: 25px;
+  top: 30%;
+  right: -60px;
+  content: '\2192' ;
+}
+
+.navigation .nav-btn:before {
+  content: '\2192';
+}
+
+.navigation .nav-btn.prev:before {
+  content: '\2190';
+}
+
+.carousel {
+  margin-top: 2px;
+  transition: all 0.1s ease;
+
+}
+.carousel img {
+  width: 100%;
+  transition: all 0.1s ease;
+}
+
+.item {
+position: absolute;
+display: none;
+width: 600px ;
+height: 150px ;
+}
+
+.main {
+  display: block;
+}
+
+#box-area{
+   width:980px;
+   height: 635px;
+  font-size: 20px;
+  border:0px solid red;
+  margin:0px auto;
+  }
+.box {
+margin:10px;
+width:306px;
+height:300px;
+background:#000000;
+float: left;
+margin-right: 0px auto;
+font-family: "Broadway";
+font-size: 27px;
+
+}
+.box-link {
+  text-decoration: none;
+  color:#928d3b;
+}
+
+
+.content {
+  position: absolute;
+  top: 92%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   text-align: center;
-  color: #000;
+  color: #;fff
 }
 
 .content h1 {
-  font-size: 48px;
+  font-size: 30px;
   font-weight: bold;
   margin-bottom: 20px;
 }
@@ -118,4 +201,3 @@ p {
   height: 500px;
   border: none;
 }
-
